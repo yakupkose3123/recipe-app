@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Girassol&display=swap');
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    background-color: #E1F1DD;
+    font-family: 'Girassol', cursive;  
+    font-size: 3rem;
+    text-decoration: none;
+    width: 100%;
+    height: 10vh;   
+
+}
+.link{
+    display: flex; 
+    vertical-align: baseline;
+    text-decoration: none;
+    color: #02455E;
+    padding: 25px;
+    font-weight: 500;
+}
+
+.rightNav{
+    display: flex;   
+
+}
+.link:hover{
+    color: #00ADB6;
+    font-weight: 600;
+    cursor: pointer;
+}
+

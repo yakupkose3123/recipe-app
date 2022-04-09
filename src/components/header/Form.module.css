@@ -1,8 +1,12 @@
-.container{
-    background-color: #00adb5;
-    padding-top: 1rem;
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+    
+    
 }
-.selects{
+input,button{
     text-align: center;
     font-family: 'Girassol', cursive;  
     padding: 10px 20px;
@@ -11,9 +15,8 @@
     border-radius: 10px;
     background-color: rgba(0,0,0,0.5);
     color: white;
+    
 }
-.cards{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+button{
+    color: white;
 }

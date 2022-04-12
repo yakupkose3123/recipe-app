@@ -1,7 +1,7 @@
 import React from "react";
 
 const Header = () => {
-  const head = "<JKBKSE/> RECIPE";
+  const head = "<JcbKse/> Recipe";
   return (
     <div>      
         {head}      

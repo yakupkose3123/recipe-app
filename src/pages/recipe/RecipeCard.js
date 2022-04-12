@@ -7,7 +7,7 @@ const RecipeCard = ({data}) => {
     <div className={Styles.recipeCards}>
         <h3>{data.recipe.label}</h3>
         <img src={data.recipe.image} alt="recipeImage"/>
-        <button >Show More</button>        
+        <button className={Styles.showButton}>Show More</button>        
     </div>
   )
 }

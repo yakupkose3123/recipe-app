@@ -1,5 +1,4 @@
 import HeaderLogo from "../../components/header/HeaderLogo";
-import { ReactComponent as MealIcon } from "../../assets/meal.svg";
 import {
   FormContainer,
   Header,

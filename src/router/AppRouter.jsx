@@ -10,9 +10,6 @@ import PrivateRouter from "./PrivateRouter";
 
 const AppRouter = () => {
 
-  // const [passwordIsDone, setPasswordIsDone] = useState(true); 
-
-
   return (
     <>
         <BrowserRouter>

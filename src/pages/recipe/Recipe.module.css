@@ -1,7 +1,7 @@
 .recipeCards{  
     width: 300px;
     height: 300px;
-    background-color: rgb(225, 241, 221);
+    background-color: #09ad71;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;

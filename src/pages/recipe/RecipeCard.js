@@ -1,7 +1,7 @@
 import Styles from "./Recipe.module.css"
 
 const RecipeCard = ({data}) => {
-  console.log(data.recipe);
+  // console.log(data.recipe);
 
   return (
     <div className={Styles.recipeCards}>

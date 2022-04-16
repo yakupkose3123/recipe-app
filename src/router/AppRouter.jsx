@@ -4,14 +4,13 @@ import About from "../pages/about/About"
 import Home from "../pages/home/Home";
 import Login from "../pages/login/Login";
 import Details from "../pages/details/Details";
-import {useState} from "react"
 import Footer from "../components/footer/Footer";
+import PrivateRouter from "./PrivateRouter";
 
 
 const AppRouter = () => {
 
-  const [passwordIsDone, setPasswordIsDone] = useState(true)
-  
+  // const [passwordIsDone, setPasswordIsDone] = useState(true); 
 
 
   return (
@@ -20,8 +19,16 @@ const AppRouter = () => {
             <Navbar/>
             <Routes>
               <Route path="/" element={<Login />} />
-              {passwordIsDone && <Route path="/home" element={<Home/>} />}             
-              <Route path='/about' element={<About/>}/>           
+
+              <Route path="/home" element ={<PrivateRouter/>} >
+                  <Route path="" element={<Home/>} /> 
+              </Route>
+
+              <Route path="/about" element ={<PrivateRouter/>} >
+                  <Route path='' element={<About/>}/> 
+              </Route>
+                          
+                         
               <Route path='/details' element={<Details/>}/>           
             </Routes>
             <Footer/>

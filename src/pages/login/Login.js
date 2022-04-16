@@ -1,27 +1,45 @@
-import Form from "../../components/header/Form";
-import Header from "../../components/header/Header";
-import {ReactComponent as MealIcon} from "../../assets/meal.svg";
-import Styles from "./Login.module.css";
-
+import HeaderLogo from "../../components/header/HeaderLogo";
+import { ReactComponent as MealIcon } from "../../assets/meal.svg";
+import {
+  FormContainer,
+  Header,
+  LoginContainer,
+  StyledButton,
+  StyledForm,
+  StyledImg,
+  StyledInput,
+} from "./LoginStyles";
+import meal from "../../assets/meal.svg";
 
 
 const Login = () => {
-  return (
-    <div className={Styles.container}>      
-      <div className={Styles.formGroup}>
-        <MealIcon />
-        <div className={Styles.head}>
-          <Header />
-        </div>
-        <Form />
-      </div>
-      
-      
-      
-          
-         
+  const user = {
+    username : "user"
+  }
 
-    </div>
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    sessionStorage.setItem("user", JSON.stringify(user))
+    window.location.href = "/home";
+    
+  };
+
+  return (
+    <LoginContainer>
+      <FormContainer>
+        <StyledImg src={meal}></StyledImg>
+        <Header>
+          <HeaderLogo />
+        </Header>
+
+        <StyledForm onSubmit={handleSubmit}>
+          <StyledInput type="text" placeholder="Username" required />
+          <StyledInput type="password" placeholder="Password" required />
+          <StyledButton type="submit">Login</StyledButton>
+        </StyledForm>
+      </FormContainer>
+    </LoginContainer>
   );
 };
 

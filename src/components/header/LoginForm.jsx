@@ -1,16 +1,16 @@
 import Styles from "./Form.module.css";
 import { useState } from "react";
 
-const Form = () => {
-  // const [name, setname] = useState("YAKUP");
-  // const [password, setPassword] = useState("Adana1903");
+const LoginForm = () => {
+  const [name, setname] = useState("YAKUP");
+  const [password, setPassword] = useState("Adana1903");
 
   const handleSubmit = () => {
-    /* ({name}.toUpperCase() === "YAKUP" && {password} === "Adana1903")
+     /* ({name}.toUpperCase() === "YAKUP" && {password} === "Adana1903")
       ?setPasswordIsDone(!passwordIsDone)
-      :alert("PAROLA YANLIŞ")
-     */
-    // console.log(name, password);
+      :alert("PAROLA YANLIŞ") */
+     
+    console.log(name, password);
   }
 
   return (
@@ -20,19 +20,21 @@ const Form = () => {
         name="username"
         id="username"
         // value=""
-        // onChange = {(e)=>setname(e.target.value)}
+        onChange = {(e)=>setname(e.target.value)}
         placeholder="USERNAME"
+        required
       />
       <input
         type="password"
         name="password"
         id="password"
-        // onChange = {()=>setPassword()}
+        onChange = {(e)=>setPassword(e.target.value)}
         placeholder="PASSWORD"
+        required
       />
       <button type="submit">LOGIN</button>
     </form>
   );
 };
 
-export default Form;
+export default LoginForm;
